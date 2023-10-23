@@ -17,8 +17,7 @@ def main(argv):
     parser.add_argument("-t", "--tests", nargs="+", help="list of tests to repeat")
     parser.add_argument("-n", "--count", type=int, default=100, help="number of times to repeat test sequence (default 100)")
 
-    args = parser.parse_args(argv[1:])
-    if (args):
+    if args := parser.parse_args(argv[1:]):
         print_tests(args.tests, args.count)
 
 if __name__ == "__main__":
